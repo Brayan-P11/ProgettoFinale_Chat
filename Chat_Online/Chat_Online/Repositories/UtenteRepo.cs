@@ -12,7 +12,7 @@ namespace Chat_Online.Repositories
             _context = context;
         }
 
-        public bool SoftDelete(string code)
+        public bool Delete(string code)
         {
             try
             {

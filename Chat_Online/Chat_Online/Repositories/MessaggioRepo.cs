@@ -41,7 +41,7 @@ namespace Chat_Online.Repositories
         }
 
         
-        public bool Insert(Messaggio item)
+        public bool Insert(Messaggio item) // da sistemare
         {
             try
             {
@@ -60,12 +60,24 @@ namespace Chat_Online.Repositories
             return false;
         }
 
-        public bool SoftDelete(string code)
+        public bool Delete(string code) // da controllare
         {
-            throw new NotImplementedException();
+            try
+            {
+                this.messaggi.DeleteOne<Messaggio>(m => m.Codice == code);
+
+                _logger.LogInformation("Messaggio eliminato");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+
+            return false;
         }
 
-        public bool Update(Messaggio item)
+        public bool Update(Messaggio item) // da implementare
         {
             throw new NotImplementedException();
         }

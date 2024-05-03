@@ -38,7 +38,7 @@ namespace Chat_Online.Services
             Utente? temp = _repository.GetAll().FirstOrDefault(u => u.Codice == uteDto.Cod);
 
             if (temp is not null)
-                return _repository.SoftDelete(temp.Codice);
+                return _repository.Delete(temp.Codice);
 
             return false;
         }

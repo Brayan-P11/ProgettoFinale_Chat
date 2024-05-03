@@ -1,0 +1,122 @@
+[
+  {
+    "ContainingType": "Chat_Online.Controllers.MessaggioController",
+    "Method": "ListaMessaggi",
+    "RelativePath": "api/messaggi",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.MessaggioController",
+    "Method": "InserisciMessaggio",
+    "RelativePath": "api/messaggi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mesDto",
+        "Type": "Chat_Online.DTO.MessaggioDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.MessaggioController",
+    "Method": "Index",
+    "RelativePath": "api/messaggi",
+    "HttpMethod": "",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.AuthController",
+    "Method": "Loggati",
+    "RelativePath": "login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uteDtoLogin",
+        "Type": "Chat_Online.DTO.UtenteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.AuthController",
+    "Method": "DammiInformazioniUtente",
+    "RelativePath": "profiloutente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.UtenteController",
+    "Method": "EliminaUtente",
+    "RelativePath": "Utente/elimina",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uteDto",
+        "Type": "Chat_Online.DTO.UtenteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.UtenteController",
+    "Method": "ListaUtenti",
+    "RelativePath": "Utente/lista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.UtenteController",
+    "Method": "ModificaUtente",
+    "RelativePath": "Utente/modifica",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uteDto",
+        "Type": "Chat_Online.DTO.UtenteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.UtenteController",
+    "Method": "RegistraUtente",
+    "RelativePath": "Utente/registra",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uteDto",
+        "Type": "Chat_Online.DTO.UtenteDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

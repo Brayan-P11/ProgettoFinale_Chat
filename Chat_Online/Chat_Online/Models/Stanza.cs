@@ -16,5 +16,16 @@ namespace Chat_Online.Models
 
         [BsonElement("desc")]
         public string? Descrzione { get; set; }
+
+        [BsonElement("utenti")]
+        public List<string>? Utentes { get; set; }
+
+        [BsonElement("messaggiID")]
+        public List<ObjectId>? MessaggioID { get; set; }
+
+        [BsonElement("messaggi")]
+        public List<Messaggio>? Messaggios { get; set; }
+
+
     }
 }

@@ -80,12 +80,13 @@ namespace Chat_Online.Repositories
 
 
         //DA IMPLEMENTARE MEGLIO DOMANI
-        public bool Update(Utente item)
+        public bool Update(Utente? item)
         {
             try
             {
-                Utente? temp = item;
-                _context.Utentes.Update(temp);
+                
+
+                _context.Utentes.Update(item);
                 _context.SaveChanges();
                 return true;
             }

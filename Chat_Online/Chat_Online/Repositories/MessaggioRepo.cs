@@ -7,6 +7,7 @@ namespace Chat_Online.Repositories
     {
         private IMongoCollection<Messaggio> messaggi;
         private readonly ILogger _logger;
+
         public MessaggioRepo(IConfiguration configuration, ILogger<MessaggioRepo> logger)
         {
             this._logger = logger;
@@ -49,7 +50,7 @@ namespace Chat_Online.Repositories
                     return false;
 
                 messaggi.InsertOne(item);
-                _logger.LogInformation("Messaggio inserito con successo");
+                _logger.LogInformation("Messaggio creato con successo");
                 return true;
             }
             catch (Exception ex)

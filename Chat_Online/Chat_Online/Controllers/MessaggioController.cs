@@ -22,19 +22,16 @@ namespace Chat_Online.Controllers
             return Ok(_service.Restituisci());
         }
 
-        [HttpPost]
+        [HttpPost("inserisciMessaggio")]
         public IActionResult InserisciMessaggio(MessaggioDto mesDto)
         {
             if (ModelState.IsValid)
             {
                 if (_service.Inserimento(mesDto))
-                    return Ok(new Risposta() { Status = "SUCCESS" });
+                    return Ok(new Risposta() { Status = "SUCCESS", Data = "Messaggio creato" });
             }
             return BadRequest();
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
     }
 }

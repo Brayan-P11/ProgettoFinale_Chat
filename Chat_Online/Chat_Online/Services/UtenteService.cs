@@ -94,20 +94,27 @@ namespace Chat_Online.Services
         // ma crea un nuovo utente
         public bool AggiornaUtente(UtenteDto uteDto)
         {
-            if (uteDto is not null)
+            return _repository.Update(new Utente()
             {
-                Utente temp = new Utente()
-                {
-                    Codice = uteDto.Cod,
-                    Username = uteDto.Use,
-                    PasswordU = uteDto.Pas,
-                    IsDeleted = uteDto.IsDel
-                };
+                Codice = uteDto.Cod,
+                Username = uteDto.Use,
+                PasswordU = uteDto.Pas,
+                IsDeleted = uteDto.IsDel
+            });
+            //if (uteDto is not null)
+            //{
+            //    Utente temp = new Utente()
+            //    {
+            //        Codice = uteDto.Cod,
+            //        Username = uteDto.Use,
+            //        PasswordU = uteDto.Pas,
+            //        IsDeleted = uteDto.IsDel
+            //    };
 
-                //_context.Utentes.FirstOrDefault(u => u.Username == uteDto.Use && u.PasswordU == uteDto.Pas);
-                return _repository.Update(temp);
-            }
-            return false;
+            //    //_context.Utentes.FirstOrDefault(u => u.Username == uteDto.Use && u.PasswordU == uteDto.Pas);
+            //    return _repository.Update(temp);
+            //}
+            //return false;
         }
 
         //---- LOGIN

@@ -6,9 +6,11 @@ namespace Chat_Online.DTO
 {
     public class MessaggioDto
     {
+        
+
         [Required]
         [StringLength(100)]
-        public string? Codi { get; set; } = Guid.NewGuid().ToString();
+        public string Codi { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
         [StringLength(100)]
@@ -19,10 +21,13 @@ namespace Chat_Online.DTO
         public string? Cont { get; set; }
 
         [Required]
-        [StringLength(100)]
-        public ObjectId? Stan { get; set; }
+        public DateTime Ora { get; set; }
 
-        [Required]
-        public DateTime Orar { get; set; }
+        public MessaggioDto()
+        {
+            DateTime utcNow = DateTime.UtcNow;
+
+            Ora = TimeZoneInfo.ConvertTimeFromUtc(utcNow, TimeZoneInfo.FindSystemTimeZoneById("Europe/Rome"));
+        }
     }
 }

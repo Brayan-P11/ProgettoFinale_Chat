@@ -32,8 +32,8 @@ namespace Chat_Online
 
             builder.Services.AddScoped<MessaggioRepo>();
             builder.Services.AddScoped<MessaggioService>();
-            //builder.Services.AddScoped<StanzaRepo>();
-            //builder.Services.AddScoped<StanzaService>();
+            builder.Services.AddScoped<StanzaRepo>();
+            builder.Services.AddScoped<StanzaService>();
             builder.Services.AddScoped<UtenteRepo>();
             builder.Services.AddScoped<UtenteService>();
 

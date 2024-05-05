@@ -24,8 +24,7 @@ namespace Chat_Online.Services
                         Codi = mess.Codice,
                         NomU = mess.NomeUtente,
                         Cont = mess.Contenuto,
-                        Stan = mess.Stanza,
-                        Orar = mess.Orario
+                        Ora = mess.Orario
                     });
             }
             return elenco;
@@ -38,8 +37,7 @@ namespace Chat_Online.Services
                 Codice = mesDto.Codi,
                 NomeUtente = mesDto.NomU,
                 Contenuto = mesDto.Cont,
-                Stanza = mesDto.Stan,
-                Orario = mesDto.Orar
+                Orario = mesDto.Ora
             };
 
             return _repository.Insert(mess);

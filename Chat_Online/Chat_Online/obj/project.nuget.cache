@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cOm0IUuM7h4k2mzu+yQ8iWt02bf8uOsrn8kzNmIpLUUaB5fvf5nojy6T0BdQq3Ig+uM6qew+aPDGMLiE2bhQ3A==",
+  "dgSpecHash": "UzBflJtF3w7FE3PavJJ+m2bNA4VclIaJ4q43asT7XDZACmJr6/9y+vLcenssL8rKML8wkahsKhxRxc7ursXz5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\utente\\source\\repos\\Chat_Online\\Chat_Online\\Chat_Online.csproj",
+  "projectFilePath": "C:\\Users\\utente\\OneDrive\\Desktop\\Academy_IEM\\TASKS\\Task_Finale\\Progetto_chat_online\\Chat_Online\\Chat_Online\\Chat_Online.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\utente\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\utente\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

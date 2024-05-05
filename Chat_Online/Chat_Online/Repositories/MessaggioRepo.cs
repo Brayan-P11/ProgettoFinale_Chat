@@ -7,6 +7,7 @@ namespace Chat_Online.Repositories
     {
         private IMongoCollection<Messaggio> messaggi;
         private readonly ILogger _logger;
+
         public MessaggioRepo(IConfiguration configuration, ILogger<MessaggioRepo> logger)
         {
             this._logger = logger;
@@ -41,7 +42,7 @@ namespace Chat_Online.Repositories
         }
 
         
-        public bool Insert(Messaggio item)
+        public bool Insert(Messaggio item) // da sistemare
         {
             try
             {
@@ -49,7 +50,7 @@ namespace Chat_Online.Repositories
                     return false;
 
                 messaggi.InsertOne(item);
-                _logger.LogInformation("Messaggio inserito con successo");
+                _logger.LogInformation("Messaggio creato con successo");
                 return true;
             }
             catch (Exception ex)
@@ -60,12 +61,24 @@ namespace Chat_Online.Repositories
             return false;
         }
 
-        public bool SoftDelete(string code)
+        public bool Delete(string code) // da controllare
         {
-            throw new NotImplementedException();
+            try
+            {
+                this.messaggi.DeleteOne<Messaggio>(m => m.Codice == code);
+
+                _logger.LogInformation("Messaggio eliminato");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+
+            return false;
         }
 
-        public bool Update(Messaggio item)
+        public bool Update(Messaggio item) // da implementare
         {
             throw new NotImplementedException();
         }

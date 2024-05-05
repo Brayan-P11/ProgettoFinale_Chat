@@ -12,7 +12,7 @@
   {
     "ContainingType": "Chat_Online.Controllers.MessaggioController",
     "Method": "InserisciMessaggio",
-    "RelativePath": "api/messaggi",
+    "RelativePath": "api/messaggi/inserisciMessaggio",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -26,13 +26,29 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Chat_Online.Controllers.MessaggioController",
-    "Method": "Index",
-    "RelativePath": "api/messaggi",
-    "HttpMethod": "",
+    "ContainingType": "Chat_Online.Controllers.StanzaController",
+    "Method": "ListaStanze",
+    "RelativePath": "api/stanze",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Chat_Online.Controllers.StanzaController",
+    "Method": "InserisciStanza",
+    "RelativePath": "api/stanze/inserisciStanza",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "stanDto",
+        "Type": "Chat_Online.DTO.StanzaDto",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {

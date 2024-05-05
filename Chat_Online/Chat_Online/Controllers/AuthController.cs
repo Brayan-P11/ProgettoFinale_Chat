@@ -10,6 +10,7 @@ using System.Text;
 
 namespace Chat_Online.Controllers
 {
+    [ApiController]
     public class AuthController : Controller
     {
         private readonly UtenteService _service;
